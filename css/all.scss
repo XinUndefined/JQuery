@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+  font-family: 微軟正黑體 !important;
+  text-decoration: none;
+}
+$font-size: 15px;
+@mixin pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin hideText {
+  display: block;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.swiper-container {
+  max-width: 100%;
+  height: auto;
+}
+.warp {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+//header
+.header {
+  @include flex-end;
+  &__msg {
+    display: flex;
+    &--fbColor {
+      color: #4460a0;
+      border-right: 1px solid #ccc;
+      padding-right: 10px;
+    }
+    &--twitterColor {
+      color: #00aaec;
+    }
+  }
+  &--style {
+    font-size: $font-size;
+    background-color: #f6f6f6;
+  }
+}
+.nav {
+  @include flex-sb;
+  &__logo {
+    width: 170px;
+    height: 36px;
+    background-image: url("https://upload.cc/i1/2020/04/01/Kw6Zr0.png");
+    @include hideText;
+  }
+  &__menu {
+    display: flex;
+    &__item {
+      @include pad {
+        @include flex-center;
+      }
+      &--style:hover {
+        border-bottom: 3px solid #00cf9c;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  @include pad {
+    flex-direction: column;
+  }
+}
+//banner
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+  &__text {
+    position: absolute;
+    width: 100%;
+    &--style {
+      background-color: #00000026;
+      font-size: $font-size * 2.5;
+      color: #ffffff;
+      line-height: 50px;
+      @include pad {
+        font-size: $font-size * 1.5;
+        text-align: center;
+        background-color: transparent;
+      }
+    }
+  }
+}
+// content
+.main {
+  display: flex;
+  &__item {
+    width: 33.33333%;
+    margin: 0 1.5%;
+    box-shadow: 1px 1px 10px 2px rgb(212, 212, 212);
+    &--style:hover {
+      box-shadow: 2px 2px 10px 5px rgb(212, 212, 212);
+    }
+    @include pad {
+      width: 80%;
+      margin: 5px 10% 30px;
+    }
+    &__img--style {
+      text-align: center;
+    }
+    &__title--style {
+      text-align: center;
+      font-weight: bolder;
+      font-size: $font-size + 5;
+    }
+    &__text--style {
+      line-height: 25px;
+      text-align: justify;
+      @include pad {
+        @include flex-center;
+      }
+    }
+  }
+  @include pad {
+    flex-direction: column;
+  }
+}
+//course
+.course {
+  &__title--style {
+    text-align: center;
+    font-size: $font-size + 10;
+    font-weight: 600;
+  }
+  &__table {
+    width: 840px;
+    margin: 0 auto;
+    &--style {
+      text-align: left;
+      padding: 10px 20px;
+      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
+    }
+    &--trColor {
+      background-color: #f7f7f7;
+      font-weight: 600;
+    }
+  }
+  &__responsive {
+    @include pad {
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+  }
+}
+//form
+.data {
+  &--style {
+    background-color: #009570;
+  }
+  &__title--style {
+    text-align: center;
+    font-size: $font-size + 10;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+}
+.dataForm {
+  display: flex;
+  justify-content: space-around;
+  &__input {
+    width: 45%;
+    @include pad {
+      width: 100%;
+      padding: 0 15px;
+    }
+    &__size {
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+    }
+  }
+  &__info {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    @include pad {
+      width: 100%;
+      padding: 15px;
+    }
+    &__text--style {
+      font-size: $font-size;
+      color: #ffffff;
+    }
+    &__input {
+      padding: 5px 10px;
+      &--style {
+        border-radius: 3px;
+        border: 1px solid #dbdbdb;
+      }
+    }
+    &__btn {
+      width: 70px;
+      margin-left: auto;
+      &--style {
+        border-radius: 3px;
+        border: 1px solid #42d3a9;
+        color: #ffffff;
+        background-color: #42d3a9;
+        font-size: $font-size;
+        cursor: pointer;
+      }
+      &--hover:hover {
+        background-color: #00aaec;
+      }
+    }
+  }
+  @include pad {
+    flex-direction: column;
+  }
+}
+//footer
+.footer {
+  @include flex-sb;
+  @include pad {
+    flex-direction: column;
+    text-align: center;
+  }
+  &--textColor {
+    color: #eb8ab0;
+  }
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mr-40 {
+  margin-right: 40px;
+}
+.ml-15 {
+  margin-left: 15px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-60 {
+  margin-bottom: 60px;
+}
+.ptb-5 {
+  padding: 5px 0;
+}
+.ptb-20 {
+  padding: 20px 0;
+}
+.ptb-40 {
+  padding: 40px 0;
+}
+.pb-40 {
+  padding-bottom: 40px;
+}
+.pd-15 {
+  padding: 15px;
+}
+.pl-15 {
+  padding-left: 15px;
+}
+.primary-color {
+  color: #42d3a9;
+}
