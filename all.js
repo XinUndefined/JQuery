@@ -15,3 +15,15 @@ var swiper = new Swiper(".swiper-container", {
     disableOnInteraction: false,
   },
 });
+
+$(document).ready(function () {
+  $(".course__table tbody tr:even").addClass("odd");
+  $(".course__table tbody tr").hover(
+    function () {
+      $(this).addClass("tr-bg");
+    },
+    function () {
+      $(this).removeClass("tr-bg");
+    }
+  );
+});
