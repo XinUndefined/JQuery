@@ -102,6 +102,10 @@ $font-size: 15px;
   @include pad {
     margin-top: -30px;
   }
+  &__img {
+    display: block;
+    margin: 0 auto;
+  }
   &__item {
     width: 33.33333%;
     margin: 0 1.5%;
@@ -113,17 +117,16 @@ $font-size: 15px;
       width: 80%;
       margin: 5px 10% 30px;
     }
-    &__img--style {
-      text-align: center;
-    }
     &__title--style {
       text-align: center;
       font-weight: bolder;
       font-size: $font-size + 5;
+      color: #000;
     }
     &__text--style {
       line-height: 25px;
       text-align: justify;
+      color: #000;
       @include pad {
         @include flex-center;
       }

@@ -133,6 +133,11 @@
   }
 }
 
+.main__img {
+  display: block;
+  margin: 0 auto;
+}
+
 .main__item {
   width: 33.33333%;
   margin: 0 1.5%;
@@ -152,19 +157,17 @@
   }
 }
 
-.main__item__img--style {
-  text-align: center;
-}
-
 .main__item__title--style {
   text-align: center;
   font-weight: bolder;
   font-size: 20px;
+  color: #000;
 }
 
 .main__item__text--style {
   line-height: 25px;
   text-align: justify;
+  color: #000;
 }
 
 @media (max-width: 768px) {
