@@ -9,6 +9,10 @@
     <meta name="description" content="六角學院讓您奠定良好的前端基礎" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
     <link rel="stylesheet" href="css/all.css" />
   </head>
   <body>
@@ -85,7 +89,9 @@
         <ul class="main ptb-20">
           <li class="main__item main__item--style">
             <div class="main__item__img--style ptb-20">
-              <img src="https://upload.cc/i1/2020/04/01/VKFuZq.png" alt="" />
+              <a data-fancybox="gallery" href="https://i.imgur.com/dPUv1Xm.jpg"
+                ><img src="https://upload.cc/i1/2020/04/01/VKFuZq.png" alt=""
+              /></a>
             </div>
             <h2 class="main__item__title--style">Html 5基礎教學</h2>
             <p class="main__item__text--style pd-15">
@@ -94,11 +100,13 @@
           </li>
           <li class="main__item main__item--style">
             <div class="main__item__img--style ptb-20">
-              <img
-                class="mt"
-                src="https://upload.cc/i1/2020/04/01/lWxQs0.png"
-                alt=""
-              />
+              <a data-fancybox="gallery" href="https://i.imgur.com/KrLy2gU.jpg">
+                <img
+                  class="mt"
+                  src="https://upload.cc/i1/2020/04/01/lWxQs0.png"
+                  alt=""
+                />
+              </a>
             </div>
 
             <h2 class="main__item__title--style">響應式網站設計</h2>
@@ -109,7 +117,9 @@
           </li>
           <li class="main__item main__item--style">
             <div class="main__item__img--style ptb-20">
-              <img src="https://upload.cc/i1/2020/04/01/B6JCSZ.png" alt="" />
+              <a data-fancybox="gallery" href="https://i.imgur.com/lbSvFtC.jpg">
+                <img src="https://upload.cc/i1/2020/04/01/B6JCSZ.png" alt="" />
+              </a>
             </div>
 
             <h2 class="main__item__title--style">jQuery 實戰教學</h2>
@@ -255,6 +265,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="all.js"></script>
   </body>
 </html>

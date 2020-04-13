@@ -97,6 +97,7 @@ $font-size: 15px;
 }
 // content
 .main {
+  cursor: pointer;
   display: flex;
   @include pad {
     margin-top: -30px;
