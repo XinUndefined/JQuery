@@ -4,6 +4,7 @@
   text-decoration: none;
 }
 $font-size: 15px;
+$shadow: 1px 1px 10px 2px rgb(212, 212, 212);
 @mixin pad {
   @media (max-width: 768px) {
     @content;
@@ -31,6 +32,7 @@ $font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .swiper-container {
   max-width: 100%;
   height: 360px;
@@ -82,16 +84,33 @@ $font-size: 15px;
     display: flex;
     &__item {
       @include pad {
-        @include flex-center;
+        padding: 10px;
       }
-      &--style:hover {
+      &--hover:hover {
         border-bottom: 3px solid #00cf9c;
         padding-bottom: 10px;
+      }
+    }
+    &__main {
+      display: none;
+      position: absolute;
+      margin-top: 15px;
+      z-index: 2;
+      &--style {
+        background: #fff;
+        box-shadow: $shadow;
+      }
+      &--hover:hover {
+        display: block;
+        background-color: #d1e9e9;
       }
     }
   }
   @include pad {
     flex-direction: column;
+  }
+  &--jq {
+    font-size: 15px;
   }
 }
 //banner
@@ -118,9 +137,9 @@ $font-size: 15px;
   &__item {
     width: 33.33333%;
     margin: 0 1.5%;
-    box-shadow: 1px 1px 10px 2px rgb(212, 212, 212);
+    box-shadow: $shadow;
     &--style:hover {
-      box-shadow: 2px 2px 10px 5px rgb(212, 212, 212);
+      box-shadow: $shadow;
     }
     @include pad {
       width: 80%;
@@ -308,6 +327,7 @@ $font-size: 15px;
   width: 50px;
   height: 50px;
   transform: rotate(-135deg);
+  z-index: 1;
   @include pad {
     right: 5%;
     border-right: 10px solid #50e3c2;

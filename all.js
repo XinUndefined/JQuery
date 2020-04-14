@@ -33,4 +33,13 @@ $(document).ready(function () {
       700
     );
   });
+  //nav
+  $(".nav--jq").click(function (event) {
+    event.preventDefault();
+    $(".nav__menu__main").slideToggle();
+  });
+  $(".product li").click(function (e) {
+    e.preventDefault();
+    $(this).addClass("bg-active").siblings().removeClass("bg-active");
+  });
 });
