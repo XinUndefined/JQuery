@@ -45,6 +45,10 @@ $font-size: 15px;
 //header
 .header {
   @include flex-end;
+  &__img {
+    width: 16px;
+    height: 16px;
+  }
   &__msg {
     display: flex;
     &--fbColor {
@@ -52,8 +56,13 @@ $font-size: 15px;
       border-right: 1px solid #ccc;
       padding-right: 10px;
     }
-    &--twitterColor {
-      color: #00aaec;
+    &--lineColor {
+      color: #00b900;
+    }
+    &--none {
+      @include pad {
+        display: none;
+      }
     }
   }
   &--style {
@@ -288,4 +297,26 @@ $font-size: 15px;
 }
 .tr-bg {
   background: #d1e9e9;
+}
+.top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5%;
+  right: 20%;
+  border-right: 12px solid #50e3c2;
+  border-bottom: 12px solid #50e3c2;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-135deg);
+  @include pad {
+    right: 5%;
+    border-right: 10px solid #50e3c2;
+    border-bottom: 10px solid #50e3c2;
+    width: 40px;
+    height: 40px;
+  }
+}
+.top:hover {
+  border-right: 12px solid #02c997;
+  border-bottom: 12px solid #02c997;
 }

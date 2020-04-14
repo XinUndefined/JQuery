@@ -1,13 +1,10 @@
 var swiper = new Swiper(".swiper-container", {
-  //循環
   slidesPerView: 1,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-
-  //自動
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
@@ -15,8 +12,8 @@ var swiper = new Swiper(".swiper-container", {
     disableOnInteraction: false,
   },
 });
-
 $(document).ready(function () {
+  //form
   $(".course__table tbody tr:even").addClass("odd");
   $(".course__table tbody tr").hover(
     function () {
@@ -26,4 +23,14 @@ $(document).ready(function () {
       $(this).removeClass("tr-bg");
     }
   );
+  //top
+  $(".top").click(function (event) {
+    event.preventDefault();
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      700
+    );
+  });
 });
