@@ -1,3 +1,4 @@
+//swiper
 var swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   loop: true,
@@ -13,24 +14,15 @@ var swiper = new Swiper(".swiper-container", {
   },
 });
 $(document).ready(function () {
-  //form
-  $(".course__table tbody tr:even").addClass("odd");
-  $(".course__table tbody tr").hover(
-    function () {
-      $(this).addClass("tr-bg");
-    },
-    function () {
-      $(this).removeClass("tr-bg");
-    }
-  );
-  //top
-  $(".top").click(function (event) {
+  //menu
+  $(".item--jq").click(function (event) {
     event.preventDefault();
-    $("html,body").animate(
+    $("html, body").animate(
       {
-        scrollTop: 0,
+        scrollTop: $(this.hash).offset().top,
       },
-      700
+      500,
+      "swing"
     );
   });
   //nav
@@ -42,4 +34,51 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).addClass("bg-active").siblings().removeClass("bg-active");
   });
+  //table
+  $(".table--jq tbody tr:even").addClass("odd");
+  $(".table--jq tbody tr").hover(
+    function () {
+      $(this).addClass("tr-bg");
+    },
+    function () {
+      $(this).removeClass("tr-bg");
+    }
+  );
+  //top
+  $(".top--jq").click(function (event) {
+    event.preventDefault();
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+  });
 });
+
+//form
+(function () {
+  "use strict";
+  window.addEventListener(
+    "load",
+    function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName("needs-validation");
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    },
+    false
+  );
+})();

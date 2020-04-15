@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: 微軟正黑體 !important;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 $font-size: 15px;
 $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
@@ -50,16 +50,17 @@ $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
   &__img {
     width: 16px;
     height: 16px;
+    margin-top: 3px;
   }
   &__msg {
     display: flex;
     &--fbColor {
-      color: #4460a0;
+      color: #4460a0 !important;
       border-right: 1px solid #ccc;
       padding-right: 10px;
     }
     &--lineColor {
-      color: #00b900;
+      color: #00b900 !important;
     }
     &--none {
       @include pad {
@@ -88,7 +89,7 @@ $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
       }
       &--hover:hover {
         border-bottom: 3px solid #00cf9c;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
       }
     }
     &__main {
@@ -101,25 +102,23 @@ $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
         box-shadow: $shadow;
       }
       &--hover:hover {
-        display: block;
-        background-color: #d1e9e9;
+        border-bottom: 3px solid transparent;
+        border-bottom: 3px solid #00cf9c;
       }
     }
   }
   @include pad {
     flex-direction: column;
   }
-  &--jq {
-    font-size: 15px;
-  }
 }
 //banner
 .banner {
+  margin-top: -7px;
   &__img {
-    max-width: 100%;
     height: 360px;
     @include pad {
       height: 200px;
+      width: 100%;
     }
   }
 }
@@ -139,7 +138,7 @@ $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
     margin: 0 1.5%;
     box-shadow: $shadow;
     &--style:hover {
-      box-shadow: $shadow;
+      box-shadow: 1px 1px 10px 5px rgb(212, 212, 212);
     }
     @include pad {
       width: 80%;
@@ -243,6 +242,7 @@ $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
     &__btn {
       width: 70px;
       margin-left: auto;
+      margin-top: 15px;
       &--style {
         border-radius: 3px;
         border: 1px solid #42d3a9;
@@ -271,7 +271,30 @@ $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
     color: #eb8ab0;
   }
 }
-
+//top
+.top--jq {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5%;
+  right: 20%;
+  border-right: 12px solid #50e3c2;
+  border-bottom: 12px solid #50e3c2;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-135deg);
+  z-index: 1;
+  &--style:hover {
+    border-right: 12px solid #02c997;
+    border-bottom: 12px solid #02c997;
+  }
+  @include pad {
+    right: 5%;
+    border-right: 10px solid #50e3c2;
+    border-bottom: 10px solid #50e3c2;
+    width: 40px;
+    height: 40px;
+  }
+}
 .mr-10 {
   margin-right: 10px;
 }
@@ -296,6 +319,9 @@ $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
 .ptb-5 {
   padding: 5px 0;
 }
+.ptb-10 {
+  padding: 10px 0;
+}
 .ptb-20 {
   padding: 20px 0;
 }
@@ -312,31 +338,13 @@ $shadow: 1px 1px 10px 2px rgb(212, 212, 212);
   padding-left: 15px;
 }
 .primary-color {
-  color: #42d3a9;
+  color: #42d3a9 !important;
 }
 .tr-bg {
   background: #d1e9e9;
 }
-.top {
-  cursor: pointer;
-  position: fixed;
-  bottom: 5%;
-  right: 20%;
-  border-right: 12px solid #50e3c2;
-  border-bottom: 12px solid #50e3c2;
-  width: 50px;
-  height: 50px;
-  transform: rotate(-135deg);
-  z-index: 1;
-  @include pad {
-    right: 5%;
-    border-right: 10px solid #50e3c2;
-    border-bottom: 10px solid #50e3c2;
-    width: 40px;
-    height: 40px;
-  }
-}
-.top:hover {
-  border-right: 12px solid #02c997;
-  border-bottom: 12px solid #02c997;
+.invalid-feedback {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ae0000;
 }
