@@ -36,7 +36,6 @@
 .header__img {
   width: 16px;
   height: 16px;
-  margin-top: 3px;
 }
 
 .header__msg {
@@ -100,15 +99,18 @@
   }
 }
 
-.nav__menu__item--hover:hover {
+.nav__menu__list {
+  display: block;
+  border: 3px solid transparent;
+}
+
+.nav__menu__list--style:hover {
   border-bottom: 3px solid #00cf9c;
-  padding-bottom: 15px;
 }
 
 .nav__menu__main {
   display: none;
   position: absolute;
-  margin-top: 15px;
   z-index: 2;
 }
 
@@ -116,11 +118,6 @@
   background: #fff;
   -webkit-box-shadow: 1px 1px 10px 2px #d4d4d4;
           box-shadow: 1px 1px 10px 2px #d4d4d4;
-}
-
-.nav__menu__main--hover:hover {
-  border-bottom: 3px solid transparent;
-  border-bottom: 3px solid #00cf9c;
 }
 
 @media (max-width: 768px) {
@@ -133,7 +130,13 @@
 }
 
 .banner {
-  margin-top: -7px;
+  margin-top: -5px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin-top: -15px;
+  }
 }
 
 .banner__img {
@@ -152,12 +155,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media (max-width: 768px) {
-  .main {
-    margin-top: -30px;
-  }
 }
 
 .main__img {
@@ -210,6 +207,10 @@
   }
 }
 
+.main__item--list {
+  list-style: disc;
+}
+
 @media (max-width: 768px) {
   .main {
     -webkit-box-orient: vertical;
@@ -240,6 +241,10 @@
 .course__table--trColor {
   background-color: #f7f7f7;
   font-weight: 600;
+}
+
+.course__responsive {
+  overflow-x: auto;
 }
 
 @media (max-width: 768px) {
@@ -321,7 +326,8 @@
 
 .dataForm__info__btn {
   width: 70px;
-  margin-left: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   margin-top: 15px;
 }
 
@@ -438,6 +444,10 @@
   padding: 10px 0;
 }
 
+.ptb-15 {
+  padding: 15px 0;
+}
+
 .ptb-20 {
   padding: 20px 0;
 }
@@ -456,6 +466,10 @@
 
 .pl-15 {
   padding-left: 15px;
+}
+
+.pl-20 {
+  padding-left: 20px;
 }
 
 .primary-color {

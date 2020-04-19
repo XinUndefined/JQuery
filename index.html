@@ -7,7 +7,11 @@
 
     <title>六角學院</title>
     <meta name="description" content="六角學院讓您奠定良好的前端基礎" />
-    <link rel="stylesheet" href="css/reset.css" />
+    <meta property="og:title" content="FB的標題" />
+    <meta property="og:description" content="FB的描述" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="FB上的網址" />
+    <meta property="og:image" content="FB的圖片" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
     <link
       rel="stylesheet"
@@ -19,65 +23,67 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/all.css" />
   </head>
   <body>
     <div class="warp">
-      <div class="header header--style ptb-5">
-        <a
-          href="https://www.facebook.com/hexschool/"
-          class="header__msg header__msg--fbColor mr-10"
-          ><img
-            class="header__img header__line--style"
-            src="https://upload.cc/i1/2020/04/01/a5lZ1R.png"
-            alt=""
-          /><span class="header__msg--none">粉絲團</span></a
-        >
-        <a
-          href="https://line.me/R/ti/p/%40guv7422g"
-          class="header__msg header__msg--lineColor mr-15"
-          ><img
-            class="header__img"
-            src="https://upload.cc/i1/2020/04/14/9THhzIb.jpg"
-            alt=""
-          /><span class="header__msg--none">追隨我們</span></a
-        >
-      </div>
+      <ul class="header header--style ptb-5">
+        <li>
+          <a href="#" class="header__msg header__msg--fbColor mr-10"
+            ><img
+              class="header__img header__line--style"
+              src="https://upload.cc/i1/2020/04/01/a5lZ1R.png"
+              alt=""
+            /><span class="header__msg--none">粉絲團</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="header__msg header__msg--lineColor mr-15"
+            ><img
+              class="header__img"
+              src="https://upload.cc/i1/2020/04/14/9THhzIb.jpg"
+              alt=""
+            /><span class="header__msg--none">追隨我們</span></a
+          >
+        </li>
+      </ul>
       <div class="nav ptb-5">
         <a href="https://www.hexschool.com/"
           ><h1 class="nav__logo ml-15">Hex School</h1></a
         >
-
         <ul class="nav__menu">
           <li class="nav__menu__item mr-40">
             <a
               href="https://www.hexschool.com/"
-              class="nav__menu__item--hover primary-color"
+              class="nav__menu__list nav__menu__list--style primary-color ptb-15"
               >首頁</a
             >
           </li>
           <li class="nav__menu__item mr-40">
-            <a href="#" class="nav__menu__item--hover nav--jq primary-color"
+            <a
+              href="#"
+              class="nav__menu__list nav__menu__list--style nav--jq primary-color ptb-15"
               >產品介紹</a
             >
             <ul class="nav__menu__main nav__menu__main--style pd-15">
               <li class="ptb-10">
                 <a
-                  class="nav__menu__main--hover primary-color"
+                  class="nav__menu__list nav__menu__list--style primary-color"
                   href="https://www.hexschool.com/courses/html_css.html"
                   >CSS&HTML</a
                 >
               </li>
               <li class="ptb-10">
                 <a
-                  class="nav__menu__main--hover primary-color"
+                  class="nav__menu__list nav__menu__list--style primary-color"
                   href="https://www.hexschool.com/courses/responsive.html"
                   >RWD響應式</a
                 >
               </li>
               <li class="ptb-10">
                 <a
-                  class="nav__menu__main--hover primary-color"
+                  class="nav__menu__list nav__menu__list--style primary-color"
                   href="https://www.hexschool.com/courses/jquery_ani.html"
                   >JQuery</a
                 >
@@ -87,7 +93,7 @@
           <li class="nav__menu__item mr-15">
             <a
               href="#anchor"
-              class="nav__menu__item--hover item--jq primary-color"
+              class="nav__menu__list nav__menu__list--style item--jq primary-color ptb-15"
               >聯絡我們</a
             >
           </li>
@@ -158,13 +164,15 @@
                 alt=""
               />
               <h2 class="main__item__title--style">jQuery 實戰教學</h2>
-              <p class="main__item__text--style pd-15">
-                本課程有以下特色<br />
-                ．瞭解變數的使用方法<br />
-                ．學習並操作DOM<br />
-                ．學習基本數學運算方法<br />
-                ．套件的操作及運用
-              </p>
+              <div class="pd-15">
+                <p class="main__item__text--style">本課程有以下特色</p>
+                <ul class="main__item__text--style main__item--list pl-20">
+                  <li>瞭解變數的使用方法</li>
+                  <li>學習並操作 DOM</li>
+                  <li>學習基本數學運算方法</li>
+                  <li>套件的操作及運用</li>
+                </ul>
+              </div>
             </a>
           </li>
         </ul>
@@ -295,7 +303,7 @@
         <div>
           <a href="https://www.hexschool.com/"
             ><img
-              class="ml-15 mb-30"
+              class="ml-15"
               src="https://upload.cc/i1/2020/04/11/ZpS84O.png
       "
               alt=""
